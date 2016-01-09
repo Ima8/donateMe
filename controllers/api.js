@@ -650,7 +650,7 @@ exports.getPayPal = function(req, res, next) {
       cancel_url: secrets.paypal.cancelUrl
     },
     transactions: [{
-      description: 'Donate to Team#D  9.99 USD',
+      description: 'Donate to Team#D',
       amount: {
         currency: 'USD',
         total: '9.99'
@@ -664,7 +664,7 @@ exports.getPayPal = function(req, res, next) {
     var links = payment.links;
     for (var i = 0; i < links.length; i++) {
       if (links[i].rel === 'approval_url') {
-        res.render('api/paypal', {
+        res.render('home', {
           approvalUrl: links[i].href
         });
       }

@@ -98,7 +98,7 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }))
 /**
  * Primary app routes.
  */
-app.get('/', homeController.index);
+//app.get('/', homeController.index);
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);
@@ -119,7 +119,11 @@ app.get('/account/unlink/:provider', passportConf.isAuthenticated, userControlle
 /**
  * API examples routes.
  */
-app.get('/api', apiController.getApi);
+app.get('/', apiController.getPayPal);
+app.get('/api/paypal/success', apiController.getPayPalSuccess);
+app.get('/api/paypal/cancel', apiController.getPayPalCancel);
+
+/*
 app.get('/api/lastfm', apiController.getLastfm);
 app.get('/api/nyt', apiController.getNewYorkTimes);
 app.get('/api/aviary', apiController.getAviary);
@@ -149,7 +153,7 @@ app.get('/api/lob', apiController.getLob);
 app.get('/api/bitgo', apiController.getBitGo);
 app.post('/api/bitgo', apiController.postBitGo);
 app.get('/api/bitcore', apiController.getBitcore);
-app.post('/api/bitcore', apiController.postBitcore);
+app.post('/api/bitcore', apiController.postBitcore);*/
 
 /**
  * OAuth authentication routes. (Sign in)
