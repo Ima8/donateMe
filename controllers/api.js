@@ -650,10 +650,10 @@ exports.getPayPal = function(req, res, next) {
       cancel_url: secrets.paypal.cancelUrl
     },
     transactions: [{
-      description: 'Hackathon Starter',
+      description: 'Donate to Team#D  9.99 USD',
       amount: {
         currency: 'USD',
-        total: '1.99'
+        total: '9.99'
       }
     }]
   };

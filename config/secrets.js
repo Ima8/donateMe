@@ -130,8 +130,8 @@ module.exports = {
 
   paypal: {
     host: 'api.sandbox.paypal.com',
-    client_id: process.env.PAYPAL_ID || 'AdGE8hDyixVoHmbhASqAThfbBcrbcgiJPBwlAM7u7Kfq3YU-iPGc6BXaTppt',
-    client_secret: process.env.PAYPAL_SECRET || 'EPN0WxB5PaRaumTB1ZpCuuTqLqIlF6_EWUcAbZV99Eu86YeNBVm9KVsw_Ez5',
+    client_id: process.env.PAYPAL_ID || 'ASwq5XKTIP3hpaCXQuC6erj9ECXOu268pP0rKXQX963yov3bsRfTuhxnMxrZcavqu9AmyRa5yaEfbD5Z',
+    client_secret: process.env.PAYPAL_SECRET || 'EOQom0teXPqstID4NsOX2RM186Koyr9W8Ru3A93dboh7-bud4pryZD_tsadIEH7fS9GCWikboUsAJuNz',
     returnUrl: process.env.PAYPAL_RETURN_URL || 'http://localhost:3000/api/paypal/success',
     cancelUrl: process.env.PAYPAL_CANCEL_URL || 'http://localhost:3000/api/paypal/cancel'
   },
